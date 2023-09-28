@@ -36,8 +36,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* TEXT */
-
 .heading-secondary {
   font-size: 4.8rem;
   font-weight: var(--fw-bold);
@@ -62,6 +60,11 @@ body {
   gap: 4.8rem;
 
   padding: 9.6rem 4rem;
+
+  background-image: url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+  background-position: top, bottom;
+  background-repeat: no-repeat;
 }
 
 /*********************/
@@ -78,6 +81,7 @@ body {
 }
 
 .reviews-proof {
+  display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
@@ -105,6 +109,7 @@ body {
 /*********************/
 /* TESTIMONIAL CARDS */
 .testimonial-cards {
+  display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
@@ -146,3 +151,115 @@ body {
   color: var(--neutral-white);
   line-height: 1.4;
 }
+
+.attribution {
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .heading-secondary {
+    font-size: 6.4rem;
+  }
+
+  .social-proof {
+    min-width: 100vh;
+  }
+
+  .section-testimonials {
+    background-image: url("./images/bg-pattern-top-desktop.svg"),
+      url("./images/bg-pattern-bottom-desktop.svg");
+    background-size: 10%, auto;
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+  }
+
+  /*********************/
+  /* REVIEW PROOF BOX */
+
+  .proof-text-box {
+    text-align: left;
+    gap: 2.4rem;
+  }
+
+  .proof-description {
+    font-size: 2.4rem;
+  }
+
+  .review-proof-box {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2.4rem;
+    column-gap: 2rem;
+  }
+
+  .reviews-proof {
+    display: grid;
+    padding: 0 4.8rem;
+    width: 75rem;
+  }
+
+  .review-stars {
+    gap: 2.4rem;
+    padding: 2rem 6.4rem;
+    flex-direction: row;
+  }
+
+  .stars {
+    gap: 0.8rem;
+  }
+
+  .review-text {
+    font-size: 2rem;
+  }
+
+  .reviews {
+    justify-content: space-between;
+    justify-self: start;
+  }
+
+  .report {
+    justify-content: space-around;
+    justify-self: center;
+  }
+
+  .bestTech {
+    justify-content: space-around;
+    justify-self: end;
+  }
+
+  /*********************/
+  /* TESTIMONIALS */
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    padding: 2.4rem;
+    height: 35rem;
+  }
+
+  .testimonial--card {
+    gap: 3.2rem;
+    padding: 3.6rem;
+  }
+
+  .colton {
+    align-self: start;
+  }
+
+  .irene {
+    align-self: center;
+  }
+
+  .anne {
+    align-self: end;
+  }
+
+  .attribution {
+    text-align: center;
+  }
+}
+
+/*********************/
